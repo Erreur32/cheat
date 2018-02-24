@@ -36,14 +36,22 @@ def get():
 
     # otherwise, scan the filesystem
     for cheat_dir in reversed(paths()):
-        cheats.update(
-            dict([
-                (cheat, os.path.join(cheat_dir, cheat))
-                for cheat in os.listdir(cheat_dir)
-                if not cheat.startswith('.')
-                and not cheat.startswith('__')
-            ])
-        )
+        subdirs = []
+        for root, dirs, files in os.walk(cheat_dir, topdown=True):
+            dirs[:] = [d for d in dirs if not d.startswith('.')]
+            subdirs.append(root)
+
+        for subdir in subdirs:
+            cheats.update(
+                dict([
+                    (cheat, os.path.join(subdir, cheat))
+                    for cheat in os.listdir(subdir)
+                    if not cheat.startswith('.')
+                    and not cheat.startswith('__')
+                    and not os.path.isdir(os.path.join(subdir, cheat))
+                ])
+            )
+
 
     return cheats
 
@@ -76,15 +84,21 @@ def list():
     return sheet_list
 
 
-def search(term):
-    """ Searches all cheatsheets for the specified term """
+def search(term, target_sheet):
+    """ Searches all cheatsheets for the specified term.
+        Restrict search to target_sheet if given """
     result = ''
-
     for cheatsheet in sorted(get().items()):
+        if target_sheet and target_sheet != cheatsheet[0]:
+            continue
         match = ''
-        for line in open(cheatsheet[1]):
+#        for line in open(cheatsheet[1]):
+        for index, line in enumerate(open(cheatsheet[1])):
             if term in line:
-                match += '  ' + line
+                 match += '[%d]\t\t' % index + line.strip() + '\n'
+#                if 'CHEATCOLORS' in os.environ:
+#                    line = line.replace(term, '\033[1;31m'+ term +'\033[0m');
+#                match += '  ' + line
 
         if match != '':
             result += cheatsheet[0] + ":\n" + match + "\n"

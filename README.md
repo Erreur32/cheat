@@ -1,8 +1,7 @@
 Based on [![PyPI](https://img.shields.io/pypi/v/cheat.svg)](https://pypi.python.org/pypi/cheat/) 
-
  
 
- [![cheapy](https://img.shields.io/badge/V%20-2.2.32-brightgreen.svg) Custom Verion here    
+ [![cheapy](https://img.shields.io/badge/V%20-2.2.32-brightgreen.svg)](https://github.com/Erreur32/cheat)  Custom Verion here    
  
 custom repo https://github.com/Erreur32/cheat.git
 

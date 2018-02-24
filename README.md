@@ -1,12 +1,14 @@
-[![PyPI](https://img.shields.io/pypi/v/cheat.svg)](https://pypi.python.org/pypi/cheat/)
+Based on [![PyPI](https://img.shields.io/pypi/v/cheat.svg)](https://pypi.python.org/pypi/cheat/) 
+
+Custom Verion here --> V 2.2.32
 
 
 custom repo https://github.com/Erreur32/cheat.git
 
- - Add color
+ - Add color seach and prompt
  - Add Subdir creation and search
- - Add remove sheet function
- - Add color text
+ - Add remove sheet file (-r) with confirmation
+ - Add color help text
 
 Put in your bashrc
 

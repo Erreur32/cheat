@@ -3,11 +3,11 @@ import os
 
 setup(
     name         = 'cheat',
-    version      = '2.2.3',
+    version      = '2.2.32',
     author       = 'Chris Lane',
     author_email = 'chris@chris-allen-lane.com',
     license      = 'GPL3',
-    description  = 'cheat allows you to create and view interactive cheatsheets '
+    description  = 'Custom cheat by e32 - cheat allows you to create and view interactive cheatsheets '
     'on the command-line. It was designed to help remind *nix system '
     'administrators of options for commands that they use frequently, but not '
     'frequently enough to remember.',

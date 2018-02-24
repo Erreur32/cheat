@@ -8,7 +8,7 @@ custom repo https://github.com/Erreur32/cheat.git
  - Add remove sheet function
  - Add color text
 
-Out in your bashrc
+Put in your bashrc
 
 ```sh
 function _cheat_autocomplete {
@@ -22,7 +22,26 @@ function _cheat_autocomplete {
 complete -F _cheat_autocomplete cheat
 ```
 
+Installing
+----------
 
+### manually ###
+First, install the dependencies:
+
+```sh
+[sudo] pip install docopt pygments appdirs
+```
+
+Then clone this repository:
+```sh
+git clone git@github.com:chrisallenlane/cheat.git
+```
+
+Lastly, `cd` into the cloned directory, then run:
+
+```sh
+[sudo] python setup.py install
+```
 
 cheat
 =====
@@ -67,27 +86,7 @@ Note that, while `cheat` was designed primarily for \*nix system administrators,
 it is agnostic as to what content it stores. If you would like to use `cheat`
 to store notes on your favorite cookie recipes, feel free.
 
-
-Installing
-----------
-
-### manually ###
-First, install the dependencies:
-
-```sh
-[sudo] pip install docopt pygments appdirs
-```
-
-Then clone this repository:
-```sh
-git clone git@github.com:chrisallenlane/cheat.git
-```
-
-Lastly, `cd` into the cloned directory, then run:
-
-```sh
-[sudo] python setup.py install
-```
+ 
 
 Modifying Cheatsheets
 ---------------------

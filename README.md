@@ -1,7 +1,10 @@
 Based on [![PyPI](https://img.shields.io/pypi/v/cheat.svg)](https://pypi.python.org/pypi/cheat/) 
 
-Custom Verion here --> V 2.2.32
+[![PyPI](https://img.shields.io/pypi/pyversions/Django.svg)]()
 
+Custom Verion here -->  v 2.2.32
+
+[![cheapy](https://img.shields.io/badge/cheapy-v.2.2.32-brightgreen.svg)
 
 custom repo https://github.com/Erreur32/cheat.git
 

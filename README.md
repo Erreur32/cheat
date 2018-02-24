@@ -1,5 +1,14 @@
 [![PyPI](https://img.shields.io/pypi/v/cheat.svg)](https://pypi.python.org/pypi/cheat/)
 
+
+custom repo https://github.com/Erreur32/cheat.git
+
+ - Add color
+ - Add Subdir creation and search
+ - Add remove sheet function
+ - Add color text
+
+
 cheat
 =====
 `cheat` allows you to create and view interactive cheatsheets on the

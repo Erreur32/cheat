@@ -34,7 +34,7 @@ First, install the dependencies:
 
 Then clone this repository:
 ```sh
-git clone git@github.com:chrisallenlane/cheat.git
+git clone https://github.com/Erreur32/cheat.git
 ```
 
 Lastly, `cd` into the cloned directory, then run:

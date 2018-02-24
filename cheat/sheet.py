@@ -1,3 +1,4 @@
+import sys
 import os
 import shutil
 
@@ -70,7 +71,52 @@ def path(sheet):
 def read(sheet):
     """ Returns the contents of the cheatsheet as a String """
     if not exists(sheet):
-        die('No cheatsheet found for ' + sheet)
+        die('\033[1;31mNo\033[0m cheatsheet found for \033[1;31m' + sheet + '\033[0m')
 
     with open(path(sheet)) as cheatfile:
         return cheatfile.read()
+
+def remove(sheet, default="yes"):
+    """Ask a yes/no/quit sheet via raw_input() and return their answer.
+
+    "sheet" is a string that is presented to the user.
+    "default" is the presumed answer if the user just hits <Enter>.
+        It must be "yes" (the default), "no", "quit" or None (meaning
+        an answer is required of the user).
+    The "answer" return value is one of "yes", "no" or "quit".
+    """
+
+    if not exists(sheet):
+        die('\033[1;31mNo\033[0m cheatsheet found for \033[1;31m' + sheet + '\033[0m')
+
+    sheet = sheets.get()[sheet]
+
+    valid = {"yes":"yes",   "y":"yes",    "ye":"yes",
+             "no":"no",     "n":"no",
+             "quit":"quit", "qui":"quit", "qu":"quit", "q":"quit"}
+    if default == None:
+        prompt = " [y/n/q] "
+    elif default == "yes":
+        prompt = " [Y/n/q] "
+    elif default == "no":
+        prompt = " [y/N/q] "
+    elif default == "quit":
+        prompt = " [y/n/Q] "
+    else:
+        raise ValueError("invalid default answer: '%s'" % default)
+    while 1:
+        sys.stdout.write(sheet + prompt)
+        choice = input().lower()
+        if default is not None and choice == '':
+            print("Delete\033[1;31m %s \033[0mfile " % sheet)
+            os.remove(sheet)
+            return default
+        elif choice in valid.keys():
+            print("Delete\033[1;31m %s \033[0mfile " % sheet)
+            os.remove(sheet)
+            return valid[choice]
+        else:
+            sys.stdout.write("Please respond with 'yes', 'no' or 'quit'.\n")
+
+
+

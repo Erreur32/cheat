@@ -3,7 +3,8 @@ Based on cheat [![PyPI](https://img.shields.io/pypi/v/cheat.svg)](https://pypi.p
 
 Custom Verion here   [![cheapy](https://img.shields.io/badge/V%20-2.2.32-brightgreen.svg)](https://github.com/Erreur32/cheat)   
  
-custom repo https://github.com/Erreur32/cheat.git
+Origin repo https://github.com/Erreur32/cheat.git
+Mirror repo https://git.echosystem.fr/Erreur32/cheat.git 
 
  - Add color seach and prompt
  - Add Subdir creation and search

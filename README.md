@@ -1,10 +1,15 @@
 Original project https://github.com/chrisallenlane/cheat 
 
-Fork Verion 
-
-[![cheapy](https://img.shields.io/badge/V%20-2.2.32-brightgreen.svg)](https://github.com/Erreur32/cheat)   
-
 ----
+
+Fork Verion [![cheapy](https://img.shields.io/badge/V%20-2.2.32-brightgreen.svg)](https://github.com/Erreur32/cheat)   
+
+Features: 
+ - Add color seach and prompt
+ - Add Subdir creation and search
+ - Add remove sheet file (-r) with confirmation
+ - Add color help text
+
 
 Origin repo https://github.com/Erreur32/cheat.git
 
@@ -12,10 +17,6 @@ Mirror repo https://git.echosystem.fr/Erreur32/cheat.git
 
 ----
 
- - Add color seach and prompt
- - Add Subdir creation and search
- - Add remove sheet file (-r) with confirmation
- - Add color help text
 
 Put in your bashrc
 

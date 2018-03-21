@@ -4,7 +4,7 @@ Original project https://github.com/chrisallenlane/cheat
 
 Fork Verion [![cheapy](https://img.shields.io/badge/V%20-2.2.32-brightgreen.svg)](https://github.com/Erreur32/cheat)   
 
-Features: 
+Features added by by 🅴🆁🆁🅴🆄🆁32 : 
  - Add color seach and prompt
  - Add Subdir creation and search
  - Add remove sheet file (-r) with confirmation
